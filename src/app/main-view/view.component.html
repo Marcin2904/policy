@@ -1,7 +1,6 @@
 <div class="container">
 
    <form>
-
       <h3>Agreements</h3>
       <br>
 
@@ -89,253 +88,28 @@
       <br>
       <div class="form-group">
          <label>start date</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.name>
+         <input type="text" name="name" class="form-control" [(ngModel)]=policy.startDate>
       </div>
-
 
       <br>
       <label>Scope</label>
-      <br>
-      <br>
+      <br><br>
 
 
       <div *ngFor="let obj of policyArr">
 
          <input type="checkbox" value="{{obj.value}}" (change)="arrChangeScope($event)"> {{obj.key}}
       </div>
-
-      <br>
-      <br>
-
-      <br>
-      <h3>Property</h3>
-      <br>
-
-      <div class="form-group">
-         <label>street</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.street>
-      </div>
-
-      <div class="form-group">
-         <label>house number</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseNumber>
-      </div>
-
-      <div class="form-group">
-         <label>flat number</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.flatNumber>
-      </div>
-
-      <div class="form-group">
-         <label>postcode</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.postcode>
-      </div>
-
-      <div class="form-group">
-         <label>city</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.city>
-      </div>
-
-      <br>
-      <h3>Property Info</h3>
-      <br>
-      <br>
-
-
-      <label>property type</label><br><br>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="EQUIPMENT" id="EQUIPMENT" value="APARTMENT"
-            [(ngModel)]=policy.propertyType checked>
-         <label class="form-check-label" for="agreemnet5">
-            APARTMENT
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="EQUIPMENT" id="EQUIPMENT" value="HOME"
-            [(ngModel)]=policy.propertyType checked>
-         <label class="form-check-label" for="agreemnet5">
-            HOME
-         </label>
-      </div>
-
       <br><br>
 
-      <div class="form-group">
-         <label>year of construct</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.yearOfConstruct>
-      </div>
+      <app-property></app-property>
 
-      <div class="form-group">
-         <label>area of apartment</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.areaOfApartment>
-      </div>
+      <app-property-info>
 
-      <div class="form-group">
-         <label>equipment insurance sum</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.equipmentInsuranceSum>
-      </div>
+         <app-adress></app-adress>
+      </app-property-info>
 
-      <div class="form-group">
-         <label>personal things insurance sum</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.personalThingsInsuranceSum>
-      </div>
-
-      <div class="form-group">
-         <label>walls insurance sum</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.wallsInsuranceSum>
-      </div>
-
-
-      <div class="form-group">
-         <label>house postcode</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.housePostcode>
-      </div>
-
-
-      <label>houseOwnership</label><br><br>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="OWNERSHIP" id="OWNERSHIP" value="OWNERSHIP"
-            [(ngModel)]=policy.houseOwnership checked>
-         <label class="form-check-label" for="agreemnet5">
-            OWNERSHIP
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="COOPERATIVE_OWNERSHIP" id="COOPERATIVE_OWNERSHIP"
-            value="COOPERATIVE_OWNERSHIP" [(ngModel)]=policy.houseOwnership checked>
-         <label class="form-check-label" for="agreemnet5">
-            COOPERATIVE_OWNERSHIP
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="LENDING_AGREEMENT" id="LENDING_AGREEMENT"
-            value="LENDING_AGREEMENT" [(ngModel)]=policy.houseOwnership checked>
-         <label class="form-check-label" for="agreemnet5">
-            LENDING_AGREEMENT
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="COOPERATIVE_TENANTS" id="COOPERATIVE_TENANTS"
-            value="COOPERATIVE_TENANTS" [(ngModel)]=policy.houseOwnership checked>
-         <label class="form-check-label" for="agreemnet5">
-            COOPERATIVE_TENANTS
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="LEASE_AGREEMENT" id="LEASE_AGREEMENT"
-            value="LEASE_AGREEMENT" [(ngModel)]=policy.houseOwnership checked>
-         <label class="form-check-label" for="agreemnet5">
-            LEASE_AGREEMENT
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="PERPETUAL_USE" id="PERPETUAL_USE" value="PERPETUAL_USE"
-            [(ngModel)]=policy.houseOwnership checked>
-         <label class="form-check-label" for="agreemnet5">
-            PERPETUAL_USE
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="FOR_RENT" id="FOR_RENT" value="FOR_RENT"
-            [(ngModel)]=policy.houseOwnership checked>
-         <label class="form-check-label" for="agreemnet5">
-            FOR_RENT
-         </label>
-      </div>
-      <br>
-      <br>
-
-
-      <label>Floor Type</label><br>
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="floorType" id="floorType" value="GROUND_FLOOR"
-            [(ngModel)]=policy.floorType checked>
-         <label class="form-check-label" for="agreemnet5">
-            GROUND_FLOOR
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="floorType" id="floorType" value="MIDDLE_FLOOR"
-            [(ngModel)]=policy.floorType checked>
-         <label class="form-check-label" for="agreemnet5">
-            MIDDLE_FLOOR
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="floorType" id="floorType" value="LAST_FLOOR"
-            [(ngModel)]=policy.floorType checked>
-         <label class="form-check-label" for="agreemnet5">
-            LAST_FLOOR
-         </label>
-      </div>
-
-      <br>
-      <h3>Security</h3>
-      <br>
-
-      <div *ngFor="let obj of securityArr">
-
-         <input type="checkbox" value="{{obj.value}}" (change)="arrChangeSecurity($event)"> {{obj.key}}
-      </div>
-
-      <br>
-      <br>
-      <br>
-
-
-      <div class="form-group">
-         <label>multiLatchLocks</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.multiLatchLocks>
-      </div>
-
-      <div class="form-group">
-         <label>certifiedLocks</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.certifiedLocks>
-      </div>
-
-      <div class="form-group">
-         <label>insuredLengthInYears</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.insuredLengthInYears>
-      </div>
-
-      <div class="form-group">
-         <label>houseLastYearClaims</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseLastYearClaims>
-      </div>
-
-      <div class="form-group">
-         <label>houseLastTwoYearsClaims</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseLastTwoYearsClaims>
-      </div>
-
-      <div class="form-group">
-         <label>houseLastThreeYearsClaims</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseLastThreeYearsClaims>
-      </div>
-
-      <div class="form-group">
-         <label>houseLastTwentyYearsFloods</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseLastTwentyYearsFloods>
-      </div>
-
-      <div class="form-group">
-         <label>insuredPersonNumber</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.insuredPersonNumber>
-      </div>
-
-      <br>
-      <br>
+      <app-security></app-security>
 
       <h3>clientType</h3>
       <br>
@@ -357,179 +131,12 @@
          </label>
       </div>
 
-      <br>
-      <br>
+      <app-business></app-business>
 
-      <div class="form-group">
-         <label>bussines name</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.peopleLivingNumber>
-      </div>
-
-      <div class="form-group">
-         <label>nip</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.underagePersonNumber>
-      </div>
-
-      <div class="form-group">
-         <label>regon</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.permanentlyInhabited>
-      </div>
-
-
-
-      <br>
-      <h3>customer</h3>
-      <br>
-
-      <div class="form-group">
-         <label>Name</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.name>
-      </div>
-
-      <div class="form-group">
-         <label>Surname</label>
-         <input type="text" name="surname" class="form-control" [(ngModel)]=policy.surname>
-      </div>
-
-      <div class="form-group">
-         <label>FamilyName</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.familyName>
-      </div>
-
-      <div class="form-group">
-         <label>pesel</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.pesel>
-      </div>
-
-      <div class="form-group">
-         <label>phoneNumber</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.phoneNumber>
-      </div>
-
-      <div class="form-group">
-         <label>email</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.email>
-      </div>
-
-      <br>
-      <br>
-      <br>
-
-      <label>Marital Status</label><br><br>
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="maritalStatus" id="maritalStatus" value="SINGLE"
-            [(ngModel)]=policy.maritalStatus checked>
-         <label class="form-check-label" for="agreemnet5">
-            SINGLE
-         </label>
-      </div>
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="agreemnet5" id="maritalStatus" value="MARRIED"
-            [(ngModel)]=policy.maritalStatus>
-         <label class="form-check-label" for="agreemnet5">
-            MARRIED
-         </label>
-      </div>
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="agreemnet5" id="maritalStatus" value="DIVORCED"
-            [(ngModel)]=policy.maritalStatus>
-         <label class="form-check-label" for="agreemnet5">
-            DIVORCED
-         </label>
-      </div>
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="agreemnet5" id="maritalStatus" value="WIDOW"
-            [(ngModel)]=policy.maritalStatus>
-         <label class="form-check-label" for="agreemnet5">
-            WIDOW
-         </label>
-      </div>
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="agreemnet5" id="agreemnet5" value="WIDOWER"
-            [(ngModel)]=policy.agreemnet5>
-         <label class="form-check-label" for="agreemnet5">
-            WIDOWER
-         </label>
-      </div>
-
-      <br>
-      <br>
-      <br>
-
-      <div class="form-group">
-         <label>rentedPremise</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.rentedPremise>
-      </div>
-
-      <label>businessActivity</label>
-
-      <br>
-      <br>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="TAK" id="TAK" value="true"
-            [(ngModel)]=policy.businessActivity checked>
-         <label class="form-check-label" for="agreemnet5">
-            TAK
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="NIE" id="NIE" value="false"
-            [(ngModel)]=policy.businessActivity checked>
-         <label class="form-check-label" for="agreemnet5">
-            NIE
-         </label>
-
-         <br>
-         <br>
-      </div>
-
-
-
-      <div class="form-group">
-         <label>cession</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.cession>
-      </div>
-
-      <div class="form-group">
-         <label>people livingNumber</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.peopleLivingNumber>
-      </div>
-
-      <div class="form-group">
-         <label>underage personNumber</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.underagePersonNumber>
-      </div>
-
-      <div class="form-group">
-         <label>permanently inhabited</label>
-         <input type="text" name="name" class="form-control" [(ngModel)]=policy.permanentlyInhabited>
-      </div>
-
-      <label>walls type</label>
-      <br>
-      <br>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="WOODEN" id="WOODEN" value="WOODEN"
-            [(ngModel)]=policy.wallsType checked>
-         <label class="form-check-label" for="agreemnet5">
-            WOODEN
-         </label>
-      </div>
-
-      <div class="form-check">
-         <input class="form-check-input" type="radio" name="BRCIK" id="BRCIK" value="BRCIK" [(ngModel)]=policy.wallsType
-            checked>
-         <label class="form-check-label" for="agreemnet5">
-            BRCIK
-         </label>
-      </div>
-
-      <br>
-      <br>
-
+      <app-isurer>
+         <app-adress></app-adress>
+         <app-adress></app-adress>
+      </app-isurer>
    </form>
 
 

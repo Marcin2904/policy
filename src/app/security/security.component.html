@@ -1,0 +1,56 @@
+<div class="container">
+
+    <h3>Security</h3>
+    <br>
+
+    <div *ngFor="let obj of securityArr">
+
+        <input type="checkbox" value="{{obj.value}}" (change)="arrChangeSecurity($event)"> {{obj.key}}
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+    <div class="form-group">
+        <label>multiLatchLocks</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]=policy.multiLatchLocks>
+    </div>
+
+    <div class="form-group">
+        <label>certifiedLocks</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]=policy.certifiedLocks>
+    </div>
+
+    <div class="form-group">
+        <label>insuredLengthInYears</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]=policy.insuredLengthInYears>
+    </div>
+
+    <div class="form-group">
+        <label>houseLastYearClaims</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseLastYearClaims>
+    </div>
+
+    <div class="form-group">
+        <label>houseLastTwoYearsClaims</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseLastTwoYearsClaims>
+    </div>
+
+    <div class="form-group">
+        <label>houseLastThreeYearsClaims</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseLastThreeYearsClaims>
+    </div>
+
+    <div class="form-group">
+        <label>houseLastTwentyYearsFloods</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseLastTwentyYearsFloods>
+    </div>
+
+    <div class="form-group">
+        <label>insuredPersonNumber</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]=policy.insuredPersonNumber>
+    </div>
+
+</div>

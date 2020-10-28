@@ -1,3 +1,7 @@
+import { Business } from './business';
+import { Insurer } from './insurer';
+
+
 export interface PolicyFormClass {
 
 
@@ -7,41 +11,10 @@ export interface PolicyFormClass {
     agreemnet4: string;
     agreemnet5: string;
     startDate: string;
-    name: string;
-    surname: string;
-    familyName: string;
-    pesel: string;
-    phoneNumber: string;
-    email: string;
-    maritalStatus: string;
-    
-    scope: string[];
-    street: string;
-    houseNumber: string;
-    flatNumber: string;
-    postcode: string;
-    city: string;
-    floorType: string;
+    scope: [];
 
-    propertyType: string;
-    yearOfConstruct: string;
-    areaOfApartment: number;
-    equipmentInsuranceSum: number;
-    personalThingsInsuranceSum: number;
-    wallsInsuranceSum: number;
 
-    
-    housePostcode: string;
-    houseOwnership: string;
-    rentedPremise: boolean;
-    businessActivity: boolean;
-    cession: boolean;
-    peopleLivingNumber: number;
-    underagePersonNumber: number;
-    permanentlyInhabited: boolean;
-    wallsType: string;
-
-    security: string[];
+    security: [];
     multiLatchLocks: number;
     certifiedLocks: number;
     insuredLengthInYears: number;
@@ -52,7 +25,10 @@ export interface PolicyFormClass {
     insuredPersonNumber: number;
     clientType: string;
 
-    bussinesName: string;
-    nip: string;
-    regon: string;
+    business: Business;
+ 
+    insuredList: Array<Insurer>;
+
+    agreementProcessingPersonalData: boolean;
+    
 }

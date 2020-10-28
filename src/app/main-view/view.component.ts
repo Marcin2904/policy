@@ -14,43 +14,33 @@ export class ViewComponent {
   policyArr = [
 
     {
-
-      "key": "EQUIPMENT",
-      "value": "EQUIPMENT"
+      "type": "EQUIPMENT",
+      "selected": "",
+      "insuranceSum": ""
     },
     {
-      "key": "PERSONAL_THINGS",
-      "value": "PERSONAL_THINGS"
-    },
-
-    {
-      "key": "WALLS",
-      "value": "WALLS"
-
+      "type": "PERSONAL_THINGS",
+      "selected": "",
+      "insuranceSum": ""
     },
 
     {
-      "key": "BURGLARY",
-      "value": "BURGLARY"
-
+      "type": "WALLS",
+      "selected": "",
+      "insuranceSum": "",
     },
 
     {
-      "key": "OC_INSURANCE",
-      "value": "OC_INSURANCE"
-
+      "type": "BURGLARY",
+      "selected": "",
+      "insuranceSum": "",
+    },
+    {
+      "type": "OC_INSURANCE",
+      "selected": "",
+      "insuranceSum": "",
     }
-  ];
-
-  // enum security {
-//     INTERCOM,
-//     ALARM,
-//     SECURITY_DOORS,
-//     MONITORING,
-//     SECURITY_WINDOWS,
-//     SECURITY_AGENCY
-
-// }
+  ]
 
   securityArr = [
    
@@ -158,29 +148,15 @@ export class ViewComponent {
 
     let result: PolicyFormClass = {
 
+      // MainView
       agreemnet1: this.policy.agreemnet1,
       agreemnet2: this.policy.agreemnet2,
       agreemnet3: this.policy.agreemnet3,
       agreemnet4: this.policy.agreemnet4,
       agreemnet5: this.policy.agreemnet5,
       startDate: this.policy.startDate,
-
-      name: this.policy.name,
-      surname: this.policy.surname,
-      familyName: this.policy.familyName,
-      pesel: this.policy.pesel,
-      phoneNumber: this.policy.phoneNumber,
-      email: this.policy.email,
-      maritalStatus: this.policy.maritalStatus,
-
-      scope: this.policy.scope,
-      street: this.policy.street,
-      houseNumber: this.policy.houseNumber,
-      flatNumber: this.policy.flatNumber,
-      postcode: this.policy.postcode,
-      city: this.policy.city,
-      floorType: this.policy.floorType,
-
+      scope: [],
+      
       housePostcode: this.policy.housePostcode,
       propertyType: this.policy.propertyType,
       yearOfConstruct: this.policy.yearOfConstruct,
@@ -188,6 +164,27 @@ export class ViewComponent {
       equipmentInsuranceSum: this.policy.equipmentInsuranceSum,
       personalThingsInsuranceSum: this.policy.personalThingsInsuranceSum,
       wallsInsuranceSum: this.policy.wallsInsuranceSum,
+      
+      // INSURER
+      name: this.policy.name,
+      surname: this.policy.surname,
+      familyName: this.policy.familyName,
+      pesel: this.policy.pesel,
+      phoneNumber: this.policy.phoneNumber,
+      email: this.policy.email,
+      maritalStatus: this.policy.maritalStatus,
+      homeAddress: "",
+      correspondenceAddress: "",
+      profession: "",
+
+      
+      street: this.policy.street,
+      houseNumber: this.policy.houseNumber,
+      flatNumber: this.policy.flatNumber,
+      postcode: this.policy.postcode,
+      city: this.policy.city,
+      floorType: this.policy.floorType,
+
 
 
       houseOwnership: this.policy.houseOwnership,
@@ -216,33 +213,33 @@ export class ViewComponent {
 
     }
 
-    this.mainService.postPolicy(result).subscribe(car => {
+  //   this.mainService.postPolicy(result).subscribe(car => {
 
-    },
-      (err: Error) => { console.log(err.message) })
-    console.log(result);
-  }
+  //   },
+  //     (err: Error) => { console.log(err.message) })
+  //   console.log(result);
+  // }
 
-  arrChangeScope(event) {
-    let index = this.policy.scope.indexOf(event.target.value)
-    if (index == -1) {
-      this.policy.scope.push(event.target.value);
-    }
-    else {
-      this.policy.scope.splice(index, 1);
-    }
-    console.log(this.policy.scope);
-  }
+  // arrChangeScope(event) {
+  //   let index = this.policy.scope.indexOf(event.target.value)
+  //   if (index == -1) {
+  //     this.policy.scope.push(event.target.value);
+  //   }
+  //   else {
+  //     this.policy.scope.splice(index, 1);
+  //   }
+  //   console.log(this.policy.scope);
+  // }
 
 
-  arrChangeSecurity(event) {
-    let index = this.policy.security.indexOf(event.target.value)
-    if (index == -1) {
-      this.policy.security.push(event.target.value);
-    }
-    else {
-      this.policy.security.splice(index, 1);
-    }
-    console.log(this.policy.security);
-  }
+  // arrChangeSecurity(event) {
+  //   let index = this.policy.security.indexOf(event.target.value)
+  //   if (index == -1) {
+  //     this.policy.security.push(event.target.value);
+  //   }
+  //   else {
+  //     this.policy.security.splice(index, 1);
+  //   }
+  //   console.log(this.policy.security);
+  // }
 }
