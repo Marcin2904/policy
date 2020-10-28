@@ -11,6 +11,85 @@ import { PolicyFormClass } from 'src/models/policy-form';
 })
 export class ViewComponent {
 
+  policyArr = [
+
+    {
+
+      "key": "EQUIPMENT",
+      "value": "EQUIPMENT"
+    },
+    {
+      "key": "PERSONAL_THINGS",
+      "value": "PERSONAL_THINGS"
+    },
+
+    {
+      "key": "WALLS",
+      "value": "WALLS"
+
+    },
+
+    {
+      "key": "BURGLARY",
+      "value": "BURGLARY"
+
+    },
+
+    {
+      "key": "OC_INSURANCE",
+      "value": "OC_INSURANCE"
+
+    }
+  ];
+
+  // enum security {
+//     INTERCOM,
+//     ALARM,
+//     SECURITY_DOORS,
+//     MONITORING,
+//     SECURITY_WINDOWS,
+//     SECURITY_AGENCY
+
+// }
+
+  securityArr = [
+   
+    {
+
+      "key": "INTERCOM",
+      "value": "INTERCOM"
+    },
+    {
+      "key": "ALARM",
+      "value": "ALARM"
+    },
+
+    {
+      "key": "SECURITY_DOORS",
+      "value": "SECURITY_DOORS"
+
+    },
+
+    {
+      "key": "MONITORING",
+      "value": "MONITORING"
+
+    },
+
+    {
+      "key": "SECURITY_WINDOWS",
+      "value": "SECURITY_WINDOWS"
+
+    },
+
+    {
+      "key": "SECURITY_AGENCY",
+      "value": "SECURITY_AGENCY"
+
+    }
+
+  ]
+
 
   policy = {
 
@@ -19,6 +98,7 @@ export class ViewComponent {
     agreemnet3: "",
     agreemnet4: "",
     agreemnet5: "",
+    startDate: "",
 
     name: "",
     surname: "",
@@ -34,6 +114,7 @@ export class ViewComponent {
     flatNumber: "",
     postcode: "",
     city: "",
+    floorType: "",
 
 
     propertyType: "",
@@ -63,7 +144,11 @@ export class ViewComponent {
     houseLastThreeYearsClaims: null,
     houseLastTwentyYearsFloods: null,
     insuredPersonNumber: null,
-    clientType: ""
+    clientType: "",
+
+    bussinesName: "",
+    nip: "",
+    regon: ""
 
   };
 
@@ -78,6 +163,7 @@ export class ViewComponent {
       agreemnet3: this.policy.agreemnet3,
       agreemnet4: this.policy.agreemnet4,
       agreemnet5: this.policy.agreemnet5,
+      startDate: this.policy.startDate,
 
       name: this.policy.name,
       surname: this.policy.surname,
@@ -93,6 +179,7 @@ export class ViewComponent {
       flatNumber: this.policy.flatNumber,
       postcode: this.policy.postcode,
       city: this.policy.city,
+      floorType: this.policy.floorType,
 
       housePostcode: this.policy.housePostcode,
       propertyType: this.policy.propertyType,
@@ -121,7 +208,11 @@ export class ViewComponent {
       houseLastThreeYearsClaims: this.policy.houseLastThreeYearsClaims,
       houseLastTwentyYearsFloods: this.policy.houseLastTwentyYearsFloods,
       insuredPersonNumber: this.policy.insuredPersonNumber,
-      clientType: this.policy.clientType
+      clientType: this.policy.clientType,
+
+      bussinesName: this.policy.bussinesName,
+      nip: this.policy.nip,
+      regon: this.policy.regon,
 
     }
 
@@ -132,7 +223,26 @@ export class ViewComponent {
     console.log(result);
   }
 
+  arrChangeScope(event) {
+    let index = this.policy.scope.indexOf(event.target.value)
+    if (index == -1) {
+      this.policy.scope.push(event.target.value);
+    }
+    else {
+      this.policy.scope.splice(index, 1);
+    }
+    console.log(this.policy.scope);
+  }
 
 
-
+  arrChangeSecurity(event) {
+    let index = this.policy.security.indexOf(event.target.value)
+    if (index == -1) {
+      this.policy.security.push(event.target.value);
+    }
+    else {
+      this.policy.security.splice(index, 1);
+    }
+    console.log(this.policy.security);
+  }
 }

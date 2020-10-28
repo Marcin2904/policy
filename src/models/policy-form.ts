@@ -6,6 +6,7 @@ export interface PolicyFormClass {
     agreemnet3: string;
     agreemnet4: string;
     agreemnet5: string;
+    startDate: string;
     name: string;
     surname: string;
     familyName: string;
@@ -20,6 +21,7 @@ export interface PolicyFormClass {
     flatNumber: string;
     postcode: string;
     city: string;
+    floorType: string;
 
     propertyType: string;
     yearOfConstruct: string;
@@ -49,47 +51,8 @@ export interface PolicyFormClass {
     houseLastTwentyYearsFloods: number;
     insuredPersonNumber: number;
     clientType: string;
+
+    bussinesName: string;
+    nip: string;
+    regon: string;
 }
-  
-// enum scope {
-//     EQUIPMENT,
-//     PERSONAL_THINGS,
-//     WALLS,
-//     BURGLARY,
-//     OC_INSURANCE
-// }
-// enum security {
-//     INTERCOM,
-//     ALARM,
-//     SECURITY_DOORS,
-//     MONITORING,
-//     SECURITY_WINDOWS,
-//     SECURITY_AGENCY
-
-// }
-// enum maritalStatus {
-
-//     SINGLE,
-//     MARRIED,
-//     DIVORCED,
-//     WIDOW,
-//     WIDOWER
-// }
-// enum PropertyType {
-//     HOME,
-//     APARTMENTT
-// }
-// enum houseOwnership {
-//     OWNERSHIP,
-//     COOPERATIVE_OWNERSHIP,
-//     LENDING_AGREEMENT,
-//     COOPERATIVE_TENANTS,
-//     LEASE_AGREEMENT,
-//     PERPETUAL_USE,
-//     FOR_RENT
-// }
-
-// enum wallsType {
-//     BRINCK,
-//     WOODEN
-// }
