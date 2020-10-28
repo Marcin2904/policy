@@ -148,7 +148,7 @@ export class ViewComponent {
 
     let result: PolicyFormClass = {
 
-      // MainView
+      // MAINVIEW
       agreemnet1: this.policy.agreemnet1,
       agreemnet2: this.policy.agreemnet2,
       agreemnet3: this.policy.agreemnet3,
@@ -157,13 +157,28 @@ export class ViewComponent {
       startDate: this.policy.startDate,
       scope: [],
       
-      housePostcode: this.policy.housePostcode,
+      // PROPERTY
       propertyType: this.policy.propertyType,
       yearOfConstruct: this.policy.yearOfConstruct,
       areaOfApartment: this.policy.areaOfApartment,
       equipmentInsuranceSum: this.policy.equipmentInsuranceSum,
       personalThingsInsuranceSum: this.policy.personalThingsInsuranceSum,
       wallsInsuranceSum: this.policy.wallsInsuranceSum,
+      
+      //PROPERTY-INFO
+      houseOwnership: this.policy.houseOwnership,
+      rentedPremise: this.policy.rentedPremise,
+      businessActivity: this.policy.businessActivity,
+      cession: this.policy.cession,
+      underConstruction: "",
+      peopleLivingNumber: this.policy.peopleLivingNumber,
+      underagePersonNumber: this.policy.underagePersonNumber,
+      permanentlyInhabited: this.policy.permanentlyInhabited,
+      wallsType: this.policy.wallsType,
+      address: "",
+      floorType: this.policy.floorType,
+
+      
       
       // INSURER
       name: this.policy.name,
@@ -183,18 +198,9 @@ export class ViewComponent {
       flatNumber: this.policy.flatNumber,
       postcode: this.policy.postcode,
       city: this.policy.city,
-      floorType: this.policy.floorType,
 
 
 
-      houseOwnership: this.policy.houseOwnership,
-      rentedPremise: this.policy.rentedPremise,
-      businessActivity: this.policy.businessActivity,
-      cession: this.policy.cession,
-      peopleLivingNumber: this.policy.peopleLivingNumber,
-      underagePersonNumber: this.policy.underagePersonNumber,
-      permanentlyInhabited: this.policy.permanentlyInhabited,
-      wallsType: this.policy.wallsType,
 
       security: this.policy.security,
       multiLatchLocks: this.policy.multiLatchLocks,
