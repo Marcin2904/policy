@@ -1,3 +1,4 @@
+import { CommentStmt } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,22 @@ import { Component } from '@angular/core';
 })
 export class PropertyComponent {
 
-  
+
+
+
+
+  // property = {
+
+  //   propertyType: "",
+  //   yearOfConstruct: "",
+  //   areaOfApartment: null,
+  //   equipmentInsuranceSum: null,
+  //   personalThingsInsuranceSum: null,
+  //   wallsInsuranceSum: null,
+  // }
+
+
+
 
 }
+

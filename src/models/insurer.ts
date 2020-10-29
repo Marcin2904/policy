@@ -1,4 +1,6 @@
-import { Address } from './address';
+import { Address } from 'cluster';
+import { CorrespondenceAddress } from './correspondence-adddress';
+
 
 export interface Insurer {
 
@@ -10,6 +12,6 @@ export interface Insurer {
     email: string;
     maritalStatus: string;
     homeAddress: Address;
-    correspondenceAddress: Address;
+    correspondenceAddress: CorrespondenceAddress;
     profession: string;
 }

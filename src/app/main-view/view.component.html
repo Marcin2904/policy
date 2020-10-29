@@ -104,12 +104,9 @@
 
       <app-property></app-property>
 
-      <app-property-info>
+      <app-property-info></app-property-info>
 
-         <app-adress></app-adress>
-      </app-property-info>
-
-      <app-security></app-security>
+      
 
       <h3>clientType</h3>
       <br>
@@ -131,12 +128,27 @@
          </label>
       </div>
 
-      <app-business></app-business>
+      <app-security></app-security>
 
-      <app-isurer>
-         <app-adress></app-adress>
-         <app-adress></app-adress>
-      </app-isurer>
+      <app-isurer></app-isurer>
+
+      <label>Agreement Processing Personal Data</label><br>
+      <div class="form-check">
+         <input class="form-check-input" type="radio" name="agreementProcessingPersonalData" id="agreementProcessingPersonalData" value="true"
+            [(ngModel)]=policy.agreementProcessingPersonalData checked>
+         <label class="form-check-label" for="agreemnet5">
+            TAK
+         </label>
+      </div>
+      <div class="form-check">
+         <input class="form-check-input" type="radio" name="agreementProcessingPersonalData" id="agreementProcessingPersonalData" value="false"
+            [(ngModel)]=policy.agreementProcessingPersonalData>
+         <label class="form-check-label" for="agreemnet5">
+            NIE
+         </label>
+      </div>
+
+
    </form>
 
 

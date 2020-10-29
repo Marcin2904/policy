@@ -1,5 +1,8 @@
 import { Business } from './business';
 import { Insurer } from './insurer';
+import { Property } from './property';
+import { PropertyInfo } from './property-info';
+import { Security } from './security';
 
 
 export interface PolicyFormClass {
@@ -14,21 +17,18 @@ export interface PolicyFormClass {
     scope: [];
 
 
-    security: [];
-    multiLatchLocks: number;
-    certifiedLocks: number;
-    insuredLengthInYears: number;
-    houseLastYearClaims: number;
-    houseLastTwoYearsClaims: number;
-    houseLastThreeYearsClaims: number;
-    houseLastTwentyYearsFloods: number;
-    insuredPersonNumber: number;
-    clientType: string;
+    street: string;
+    houseNumber: string;
+    flatNumber: string;
+    postcode: string;
+    city: string;
+    floorType: string;
+    property: Property;
+    propertyInfo: PropertyInfo;
+    security: Security;
 
-    business: Business;
- 
-    insuredList: Array<Insurer>;
+    agreementProcessingPersonalData: ""
 
-    agreementProcessingPersonalData: boolean;
+    
     
 }

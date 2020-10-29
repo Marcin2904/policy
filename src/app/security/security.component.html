@@ -15,42 +15,64 @@
 
     <div class="form-group">
         <label>multiLatchLocks</label>
-        <input type="text" name="name" class="form-control" [(ngModel)]=policy.multiLatchLocks>
+        <input type="text" name="name" class="form-control" [(ngModel)]=security.multiLatchLocks>
     </div>
 
     <div class="form-group">
         <label>certifiedLocks</label>
-        <input type="text" name="name" class="form-control" [(ngModel)]=policy.certifiedLocks>
+        <input type="text" name="name" class="form-control" [(ngModel)]=security.certifiedLocks>
     </div>
 
     <div class="form-group">
         <label>insuredLengthInYears</label>
-        <input type="text" name="name" class="form-control" [(ngModel)]=policy.insuredLengthInYears>
+        <input type="text" name="name" class="form-control" [(ngModel)]=security.insuredLengthInYears>
     </div>
 
     <div class="form-group">
         <label>houseLastYearClaims</label>
-        <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseLastYearClaims>
+        <input type="text" name="name" class="form-control" [(ngModel)]=security.houseLastYearClaims>
     </div>
 
     <div class="form-group">
         <label>houseLastTwoYearsClaims</label>
-        <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseLastTwoYearsClaims>
+        <input type="text" name="name" class="form-control" [(ngModel)]=security.houseLastTwoYearsClaims>
     </div>
 
     <div class="form-group">
         <label>houseLastThreeYearsClaims</label>
-        <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseLastThreeYearsClaims>
+        <input type="text" name="name" class="form-control" [(ngModel)]=security.houseLastThreeYearsClaims>
     </div>
 
     <div class="form-group">
         <label>houseLastTwentyYearsFloods</label>
-        <input type="text" name="name" class="form-control" [(ngModel)]=policy.houseLastTwentyYearsFloods>
+        <input type="text" name="name" class="form-control" [(ngModel)]=security.houseLastTwentyYearsFloods>
     </div>
 
     <div class="form-group">
         <label>insuredPersonNumber</label>
-        <input type="text" name="name" class="form-control" [(ngModel)]=policy.insuredPersonNumber>
+        <input type="text" name="name" class="form-control" [(ngModel)]=security.insuredPersonNumber>
     </div>
+
+    <h3>clientType</h3>
+    <br>
+    <br>
+
+    <div class="form-check">
+       <input class="form-check-input" type="radio" name="INDIVIDUAL" id="INDIVIDUAL" value="INDIVIDUAL"
+          [(ngModel)]=security.clientType checked>
+       <label class="form-check-label" for="agreemnet5">
+          INDIVIDUAL
+       </label>
+    </div>
+
+    <div class="form-check">
+       <input class="form-check-input" type="radio" name="SOLE_TRADER" id="SOLE_TRADER" value="SOLE_TRADER"
+          [(ngModel)]=security.clientType checked>
+       <label class="form-check-label" for="agreemnet5">
+          SOLE_TRADER
+       </label>
+    </div>
+
+    <app-business></app-business>
 
 </div>
